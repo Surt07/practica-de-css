@@ -1,0 +1,328 @@
+body{   /* Aquí va el cambio de fuente para el body de todas las páginas, este código viene para copiar desde la página donde inportamos */
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color:#c78c19;
+}
+
+.productos li:active{
+    border-color:#088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding:40px;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin:20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color:white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* CSS para la página principal */
+
+.banner{
+    width: 100%;
+}
+
+/*  SELECTORES AVANZADOS */
+/*
+main > p{    Combinador de hijo: Selecciona los elementos que son hijos directos del primero elemento. 
+    Usando como ejemplo un <p> que va despues del <main>, que es el primero en la pag.       
+    background: red;
+    Todos los elementos <p> que son hijos directos de <main> tendrán fondo rojo.  
+        elemento > hijo 
+
+}
+
+img + p{     Combinador de hermanos adyacentes: El segundo elemento sigue directamente al primero, y ambos comparten el mismo elemento padre.  
+    background: yellow; 
+    Todos los elementos <p> que siguen DIRECTAMENTE al elemento <img>, tendrán un fondo amarillo. 
+}
+
+img ~ p{     Combinador general de hermanos: El segundo elemento sigue al primero(no necesariamente de forma instantanea) y ambos comparten el mismo elemento padre. 
+    background: green;
+    Todos los elementos <p> despues de <img>, tendrán color verde (Por la jerarquia, esto tambien puede afectar al fondo amarillo de antes) 
+}
+
+.principal p:not(#mision){   En este caso queremos aplicar un cambio a todo menos al texto de en medio, el cual ya tiene el id="mision".
+    background: orange;  En .principal, todos los <p>, que no tengan <id="mision">, ponles fondo naranja. 
+}
+*/
+
+.principal{
+    padding: 3em 0;
+    background: #FFFFFF;
+    width: 940px;
+    margin: 0 auto; 
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /* 2em siginifica: 2 veces el tamaño de la fuente padrón del navegador */
+    margin: 0 0 1em; /* 0 top 0 left, 1 vez el tamaño de fuente padrón para bot*/
+    clear: left;    /* cualquier info que venga despues de la izquierda, queda limpiado */
+    /* La propiedad "clear" se utiliza cuando quieres que un elemento no se posicione al lado de los elementos flotantes anteriores */
+    /*color: rgba(218,0,0,3);    Con esto le podemos cambiar el color, en rgba, la a significa la opacidad que va a tener el color final. 
+    text-shadow: 2px 2px 10px red;  Tambien se pueden añadir sombras al texto */
+}
+
+/*      PSEUDO-ELEMENTOS:
+.titulo-principal:first-letter{     Con esto se selecciona la primera letra del los elementos que hayan en titulo-principal
+    font-weight: bold;
+}
+
+.titulo-principal:before{   Con este lo que haya antes del elemento, por ejemplo, podemos añadir un caracter antes del texto
+    content: "[";
+}
+
+.titulo-principal:after{    Con este es lo mismo pero al final del texto 
+    content: "]";
+}
+
+p:first-line{       Con esto seleccionamos la primera línea de texto en el elemento. Esa línea se verá en italic
+    font-style: italic;
+}
+*/
+
+.principal p{   /* todos los p, de la section class="principal" */
+    margin: 0 0 1em;   /* Salto de pag de 1 vez el tamaño de la fuente */
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;   /* width: calc(40% - (26px));       Otra forma de acomodarla, se puede pedir que calcule el 40% del espacio, y a eso le resto 26px */
+    float: left;    /* Con esta propiedad la imagen se pondrá al lado izquierdo del texto, el texto queda al rededor de la iamgen. */
+    margin: 0 20px 20px 0;  /* top right bot left */
+}
+
+.mapa{
+    padding: 3em 0; 
+    background: linear-gradient(#FFFFFF, #888888);
+    /* hay varios tipos de gradiantes, se puede definir que colores usar, y cunato porcentaje pueden usar cada uno del tamaño que haya disponible.
+    background: linear-gradient(90deg, orange 50%, blue, red, black);   En el caso de linear, se puede decir los grados, si no se se especifica, será en horizontal.
+    background: radial-gradient(orange 50%, blue, red, black);  radial es como dice el nombre, gradiante de forma circular.
+    */
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+    /* box-shadow: inset 0 0 30px red;      Con esto se da una sombra interior. */
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;     /* La lista va a ocupar un 40% de espacio y la imagen 60%, de los 640px en total de ancho.*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5; /* Funciona como el "em", toma como referencia el tamaño padrón de la fuente. (el tamaño a tomar es del 50%) */
+}
+
+.items:before{      /* Al inicio de cada elemento en la lista habrá una estrella. Puede ser cualquier otro caracter. */
+    content: "★";
+}
+
+.items:first-child{     /* Esta pseudo-clase, selecciona especificamente el primer elemento, el primer hijo*/
+    font-weight: bold;
+    /* Tambien está last-child para el último elemento. 
+    Si necesitamos uno de entre medio está "nth-child", ahí solo tenemos que poner el numero del elemento:      .items:nth-child(3)  
+    Tambien podemos poner "2n", con esto aplicaría el efecto 1 si, 1 no, 1 si, 1 no.    Nota: El valor empieza en 1, no en cero. */
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;  /* 10px der, 10px bot (si fuera 10px -10px, la sombra quedaría hacia arriba). */
+    /* Se puede aplciar multiples sombras, pa ello simplemente hay que añadir una coma y escribir la siguiente sombra:
+    box-shadow: 10px 10px 30px 15px #000000, -10px -10px yellow, -15px 10px rgba(50, 50, 50,0.5);   Aquí hay 3 sombras
+    
+    El formato de la sombra es:
+    Tamaño horizontal, Tamaño vertical, Opacidad/Difuminación, Spread/Expansion, Color.
+    Basta con solo poner el tamaño de la sombra y el color.
+    */
+}
+
+.imagen-diferenciales:hover{   /* Animacion de opacidad al pasar el cursor en la imagen */
+    opacity: 0.3;    
+}
+
+.video{
+    width: 560px; /* La anchura del div es la misma que la del vídeo */ 
+    margin: 1em auto; /* 1em vertical y auto en laterales */
+}
+
+/* MEDIA QUERY */
+/* Con esto hacemos compatible la página con dispositivos moviles*/
+@media screen and (max-width:480px){    /* Esto es una condicion que se activa si encuentra una pantalla de hasta 480px de ancho. */
+    h1{     /* Alineando el logo */
+        text-align: center; 
+    }
+    nav{    /* El menú ahora es estatico y se posiciona abajo del logo */
+        position: static;
+    }
+    /* Anteriormente el ancho que ocupaban estos elementos era de 940px por lo general, ahora esta auto para que todos queden bien de espacio. */
+    /* Para el vídeo tambien tenemos que ajustar el ancho desde el HTML, basta con que dejemos el ancho tambien en auto, en pc no se debería notar el cambio */
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+    /* Como ahora la pantalla es mas pequeña, queda mejor que ambas cosas ocupen el mismo ancho, y las separemos una arriba y otra abajo */
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
+
